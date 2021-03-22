@@ -5,9 +5,9 @@
 int main() {
     int fd, sz;
     char *buf = (char *) calloc(120, sizeof(char));
-    fd = open("foo.txt", O_RDONLY); 
+    fd = open("foo2.txt", O_RDONLY); 
     if (fd < 0) {
-       perror("feil ved lesing af fil"); exit(1);
+       perror("feil ved lesing av fil"); exit(1);
     }
     sz = read(fd, buf, 120);
     printf("Gjorde et kall til read(%d, buf, 120). Returnerte at %d bytes ble lest.\n", fd, sz);
